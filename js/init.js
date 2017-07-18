@@ -14,17 +14,13 @@
       xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css', containers: '100%' }
     }
   } );
+
   $( function () {
     var $window = $( window ),
       $body = $( 'body' ),
       $html = $( 'html' );
     // Disable animations/transitions until the page has loaded.
-    $html.addClass( 'is-loading' );
-    $window.on( 'load', function () {
-      window.setTimeout( function () {
-        $html.removeClass( 'is-loading' );
-      }, 0 );
-    } );
+
     // Touch mode.
     if ( skel.vars.isMobile ) {
       var $wrapper;
